@@ -1,6 +1,6 @@
 ---
-title: 'First post'
-description: 'Lorem ipsum dolor sit amet'
+title: 'Investment Grindstone'
+description: 'Finance Track on Nasdaq'
 pubDate: 'Jul 08 2022'
 heroImage: ['/nasdaq1.png', '/nasdaq2.png']
 ---
