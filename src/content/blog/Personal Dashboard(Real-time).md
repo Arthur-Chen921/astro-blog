@@ -124,76 +124,59 @@ term debt occupies a very exaggerated proportion.
 
 In summary, in order to evaluate the operational status of the company, I have divided the overall calculation into four parts: calculating the proportion of operating costs, measuring the health of cash flow, the degree of decline in dividends and reputation assets, and long-term debt issuance.
 
-You can also calculate it by this formula, and this website will not collect any information from you.
-class FinanceHealthCalculator {
-  constructor() {
-    this.bindInputs();
-    this.updateCalculation();
-  }
-
-  bindInputs() {
-    document.querySelectorAll('input').forEach(input => {
-      input.addEventListener('input', () => this.updateCalculation());
-    });
-  }
-
-  updateCalculation() {
-    const inputs = this.getInputValues();
-    const factors = this.calculateFactors(inputs);
-    this.displayResults(factors);
-  }
-
-  getInputValues() {
-    return {
-      revenue: parseFloat(document.getElementById('revenue').value) || 0,
-      opCost: parseFloat(document.getElementById('opCost').value) || 0,
-      dividend: parseFloat(document.getElementById('dividend').value) || 0,
-      dividendPrev: parseFloat(document.getElementById('dividendPrev').value) || 0,
-      reputation: parseFloat(document.getElementById('reputation').value) || 0,
-      longDebt: parseFloat(document.getElementById('longDebt').value) || 0
-    };
-  }
-
-  calculateFactors({revenue, opCost, dividend, dividendPrev, reputation, longDebt}) {
-    // 1. 成本因子计算
-    const costRatio = opCost / revenue;
-    let costFactor = 0;
-    if (costRatio <= 0.7) {
-      costFactor = 0.4 * (1 - Math.pow(costRatio, 2));
-    } else {
-      costFactor = 0.4 * Math.exp(-2 * (costRatio - 0.7));
-    }
-
-    // 2. 分红声誉因子
-    const dividendChange = Math.abs((dividend - dividendPrev) / dividendPrev) || 0;
-    const reputationFactor = 0.3 * (1 - dividendChange) * (reputation / 100);
-
-    // 3. 债务健康因子
-    const debtRatio = longDebt / revenue;
-    const debtFactor = 0.3 * Math.tanh(debtRatio / 2);
-
-    return {
-      costFactor: Math.min(costFactor, 0.4),
-      reputationFactor: Math.min(reputationFactor, 0.3),
-      debtFactor: Math.min(debtFactor, 0.3),
-      totalScore: (costFactor + reputationFactor + debtFactor) * 100
-    };
-  }
-
-  displayResults({costFactor, reputationFactor, debtFactor, totalScore}) {
-    // 更新仪表盘
-    document.documentElement.style.setProperty('--score', totalScore);
-    document.getElementById('finalScore').textContent = totalScore.toFixed(1);
-    
-    // 更新中间指标
-    document.getElementById('costFactor').textContent = costFactor.toFixed(3);
-    document.getElementById('reputationFactor').textContent = reputationFactor.toFixed(3);
-    document.getElementById('debtFactor').textContent = debtFactor.toFixed(3);
-  }
+.formula-section {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 2rem;
 }
 
-// 初始化计算器
-new FinanceHealthCalculator();
+.formula p {
+  font-family: 'Courier New', monospace;
+  margin: 10px 0;
+  color: #2c3e50;
+}
+
+.calculator {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.input-group {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+input[type="number"] {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.score-meter {
+  height: 40px;
+  background: #eee;
+  border-radius: 20px;
+  margin: 20px 0;
+  position: relative;
+}
+
+.score-fill {
+  width: calc(var(--score) * 1%);
+  height: 100%;
+  background: linear-gradient(to right, #e74c3c, #2ecc71);
+  border-radius: 20px;
+  transition: width 0.3s ease;
+}
+
+.indicators p {
+  margin: 5px 0;
+  color: #7f8c8d;
+}
 
 ![blog placeholder](/dashboard1.png)
 ![blog placeholder](/dashboard2.png)
