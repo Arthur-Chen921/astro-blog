@@ -13,6 +13,14 @@ This is a data dashboard project I created while studying finance. Compared to t
 I selected financial indicators on Yahoo, Alpha Vantage, and FMP, and then used Python's data crawling function to classify and reorganize them.
 The reports on these websites are always incomplete, indicating that companies have not measured their respective indicators as expected. But we can still see what these companies have done from the ratio of cash flow to changes in their assets.
 
+#### Catalogue
+- Data Collection
+- Analysis
+  - Income and expenditure analysis
+  - Asset proportion
+  - Long term financial health
+- Outcome
+
 #### Part1.Data Collection
 
 ##### I have selected the top thirty Nasdaq stocks updated in real-time from yfinance. Please note that re running them will update the latest list
@@ -69,25 +77,20 @@ combined_cashflow = pd.DataFrame()
       ↪column with the mean
           df_cleaned[col] = df_cleaned[col].fillna(df_cleaned[col].mean())
       return df_cleaned
-# Apply
-income_clean = handle_missing(income)
-balance_clean = handle_missing(balance)
-cashflow_clean = handle_missing(cashflow)
 def validate_missing(df, name):
     total_missing = df.select_dtypes(include=np.number).isnull().sum().sum()
     print(f"{name}total missing: {total_missing}")
-
+# Apply
 ```
 
 
 #### Part3.Data Visualizaion
 
 
+I want to analyze the financial situation of these companies from shallow to deep. I need to have a rough estimate of their cash flow, study their income and expenditure situation, and attempt to break down the various components of their cash flow and understand their decisions. And judge from the final financial impact whether these decisions are effective.
 
 
-
-
-##### 
+##### PROFITABILITY vs. Cost control
 
 I choose a bar chart to horizontally compare the gross profit and sales management expenses of
 different companies. High gross profit but a large proportion of expenses may imply efficiency issues.Many
@@ -96,57 +99,30 @@ and revenue levels between these companies are often significant. Therefore, dir
 their operating amounts may not be a good choice. I chose to analyze their asset and cash flow
 composition to determine the operational health of this company.
 
+![blog placeholder](/provscost.png)
+
+
+Excessive operating expenses do not necessarily mean that a company has the risk of cost control.
+Companies also have similar goodwill assets that can prove their potential financing ability to
+counter potential operating expenses. Therefore, we use scatter plots to observe which companies
+have a higher proportion of goodwill.Through Group by Ticker, I calculate the total goodwill of
+each Ticker, and then calculate the proportion of goodwill assets.
+
+![blog placeholder](/scatter.png)
+
+
+
+![blog placeholder](/SCNI1.png)
 
 | Italics   | Bold     | Code   |
 | --------- | -------- | ------ |
 | _italics_ | **bold** | `code` |
 
 
-#### Output
 
-1. First item
-2. Second item
-3. Third item
 
-### Unordered List
+![blog placeholder](/SCNI2.png)
 
-#### Syntax
-
-```markdown
-- List item
-- Another item
-- And another item
-```
-
-#### Output
-
-- List item
-- Another item
-- And another item
-
-### Nested list
-
-#### Syntax
-
-```markdown
-- Fruit
-  - Apple
-  - Orange
-  - Banana
-- Dairy
-  - Milk
-  - Cheese
-```
-
-#### Output
-
-- Fruit
-  - Apple
-  - Orange
-  - Banana
-- Dairy
-  - Milk
-  - Cheese
 
 ## Other Elements — abbr, sub, sup, kbd, mark
 
