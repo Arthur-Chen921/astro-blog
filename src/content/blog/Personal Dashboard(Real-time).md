@@ -167,7 +167,7 @@ You can calculate by this formula also, this website will not collect any inform
         </div>
         <div class="score-gauge">
             <div class="gauge-fill" style="--score: 0"></div>
-            <div class="score-label">综合评分：<span id="finalScore">0</span></div>
+            <div class="score-label">Health Score：<span id="finalScore">0</span></div>
         </div>
     </div>
     <script>
