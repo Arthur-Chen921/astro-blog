@@ -1,34 +1,17 @@
 ---
-title: 'Nasdaq_30 Analysis(Real-time)'
+title: 'Personal Dashboard(Real-time)'
 description: 'Here is one of my work of Data collecting, cleaning, analyzing, and interactively presenting.'
-pubDate: 'Apr 19 2025'
+pubDate: 'Apr 12 2025'
 heroImage: '/dashboard4.png'
 ---
 
-This is a data dashboard I created while studying finance. Compared to the index provided by large websites, I am more eager to uncover the many details of economic operations.
+This is a data dashboard project I created while studying finance. Compared to the index provided by large websites, I am more eager to uncover the many details of economic operations.
 
 
-## Paragraph
+## Step decomposition
 
-Xerum, quo qui aut unt expliquam qui dolut labo. Aque venitatiusda cum, voluptionse latur sitiae dolessi aut parist aut dollo enim qui voluptate ma dolestendit peritin re plis aut quas inctum laceat est volestemque commosa as cus endigna tectur, offic to cor sequas etum rerum idem sintibus eiur? Quianimin porecus evelectur, cum que nis nust voloribus ratem aut omnimi, sitatur? Quiatem. Nam, omnis sum am facea corem alique molestrunt et eos evelece arcillit ut aut eos eos nus, sin conecerem erum fuga. Ri oditatquam, ad quibus unda veliamenimin cusam et facea ipsamus es exerum sitate dolores editium rerore eost, temped molorro ratiae volorro te reribus dolorer sperchicium faceata tiustia prat.
-
-Itatur? Quiatae cullecum rem ent aut odis in re eossequodi nonsequ idebis ne sapicia is sinveli squiatum, core et que aut hariosam ex eat.
-
-## Images
-
-### Syntax
-
-```markdown
-![Alt text](./full/or/relative/path/of/image)
-```
-
-### Output
-
-![blog placeholder](/blog-placeholder-about.jpg)
-
-## Blockquotes
-
-The blockquote element represents content that is quoted from another source, optionally with a citation which must be within a `footer` or `cite` element, and optionally with in-line changes such as annotations and abbreviations.
+I selected financial indicators on Yahoo, Alpha Vantage, and FMP, and then used Python's data crawling function to classify and reorganize them.
+The reports on these websites are always incomplete, indicating that companies have not measured their respective indicators as expected. But we can still see what these companies have done from the ratio of cash flow to changes in their assets.
 
 #### Data Collection
 
@@ -50,6 +33,16 @@ combined_income = pd.DataFrame()
 combined_balance = pd.DataFrame()
 combined_cashflow = pd.DataFrame()
 ```
+
+##### Before Clean
+
+```markdown
+![Alt text](./yahoo.png)
+```
+
+##### After clean
+
+![blog placeholder](/afterclean.png)
 
 #### Output
 
