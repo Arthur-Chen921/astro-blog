@@ -1,5 +1,5 @@
 --- 
-title: 'Investment Grindstone'
+title: 'Other Academic Work'
 description: 'Finance Track on Nasdaq'
 pubDate: 'Jul 08 2022'
 heroImage: '/nasdaq1.png'
