@@ -1,27 +1,12 @@
 ---
 title: 'Nasdaq_30 Analysis(Real-time)'
-description: 'Here is a sample of some basic Markdown syntax that can be used when writing Markdown content in Astro.'
-pubDate: 'Jun 19 2024'
+description: 'Here is one of my work of Data collecting, cleaning, analyzing, and interactively presenting.'
+pubDate: 'Apr 19 2025'
 heroImage: '/blog-placeholder-1.jpg'
 ---
 
-Here is a sample of some basic Markdown syntax that can be used when writing Markdown content in Astro.
+This is a data dashboard I created while studying finance. Compared to the index provided by large websites, I am more eager to uncover the many details of economic operations.
 
-## Headings
-
-The following HTML `<h1>`—`<h6>` elements represent six levels of section headings. `<h1>` is the highest section level while `<h6>` is the lowest.
-
-# H1
-
-## H2
-
-### H3
-
-#### H4
-
-##### H5
-
-###### H6
 
 ## Paragraph
 
@@ -45,12 +30,12 @@ Itatur? Quiatae cullecum rem ent aut odis in re eossequodi nonsequ idebis ne sap
 
 The blockquote element represents content that is quoted from another source, optionally with a citation which must be within a `footer` or `cite` element, and optionally with in-line changes such as annotations and abbreviations.
 
-### Blockquote without attribution
+#### Data Collection
 
-#### Syntax
+##### I have selected the top thirty Nasdaq stocks updated in real-time from yfinance. Please note that re running them will update the latest list
 
 ```markdown
-> Import yfinance as yf
+Import yfinance as yf
 import pandas as pd
 # Define the tickers
 # I have selected thirty stocks from the Nasdaq component page on March 22nd␣
