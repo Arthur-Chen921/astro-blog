@@ -124,59 +124,118 @@ term debt occupies a very exaggerated proportion.
 
 In summary, in order to evaluate the operational status of the company, I have divided the overall calculation into four parts: calculating the proportion of operating costs, measuring the health of cash flow, the degree of decline in dividends and reputation assets, and long-term debt issuance.
 
-.formula-section {
-  background: #f8f9fa;
-  padding: 20px;
-  border-radius: 8px;
-  margin-bottom: 2rem;
-}
+<body>
+    <!-- 公式展示区 -->
+    <div class="formula-card">
+        <h2>📈 财务健康公式</h2>
+        <div class="formula-code">
+            <p>健康评分 = </p>
+            <p>0.4 × [1 - (成本/收入)²] (当成本率≤70%)</p>
+            <p>0.4 × e⁻²⁽成本率⁻⁰⋅⁷⁾ (当成本率>70%)</p>
+            <p>+ 0.3 × (1 - 分红波动率) × 声誉%</p>
+            <p>+ 0.3 × tanh(债务/(2×收入))</p>
+        </div>
+    </div>
 
-.formula p {
-  font-family: 'Courier New', monospace;
-  margin: 10px 0;
-  color: #2c3e50;
-}
+    <!-- 交互计算器 -->
+    <div class="calculator">
+        <div class="input-grid">
+            <div>
+                <label>年度收入（万元）</label>
+                <input type="number" id="revenue" value="1000" step="100">
+            </div>
+            <div>
+                <label>运营成本（万元）</label>
+                <input type="number" id="opCost" value="700" step="50">
+            </div>
+            <div>
+                <label>当期分红（万元）</label>
+                <input type="number" id="dividend" value="200" step="10">
+            </div>
+            <div>
+                <label>上期分红（万元）</label>
+                <input type="number" id="dividendPrev" value="200" step="10">
+            </div>
+            <div>
+                <label>声誉资产（0-100）</label>
+                <input type="number" id="reputation" value="80" min="0" max="100">
+            </div>
+            <div>
+                <label>长期债务（万元）</label>
+                <input type="number" id="longDebt" value="1500" step="100">
+            </div>
+        </div>
 
-.calculator {
-  background: white;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
+        <div class="score-gauge">
+            <div class="gauge-fill" style="--score: 0"></div>
+            <div class="score-label">综合评分：<span id="finalScore">0</span></div>
+        </div>
+    </div>
 
-.input-group {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 15px;
-}
+    <script>
+    class FinanceCalculator {
+        constructor() {
+            this.inputs = [
+                'revenue', 'opCost', 'dividend', 
+                'dividendPrev', 'reputation', 'longDebt'
+            ];
+            this.init();
+        }
 
-input[type="number"] {
-  width: 100%;
-  padding: 8px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-}
+        init() {
+            // 绑定事件监听
+            this.inputs.forEach(id => {
+                document.getElementById(id).addEventListener('input', () => this.update());
+            });
+            this.update(); // 初始计算
+        }
 
-.score-meter {
-  height: 40px;
-  background: #eee;
-  border-radius: 20px;
-  margin: 20px 0;
-  position: relative;
-}
+        getValue(id) {
+            const el = document.getElementById(id);
+            return el.value ? parseFloat(el.value) : 0;
+        }
 
-.score-fill {
-  width: calc(var(--score) * 1%);
-  height: 100%;
-  background: linear-gradient(to right, #e74c3c, #2ecc71);
-  border-radius: 20px;
-  transition: width 0.3s ease;
-}
+        update() {
+            // 获取输入值
+            const [R, C, D, Dp, A, L] = this.inputs.map(id => this.getValue(id));
 
-.indicators p {
-  margin: 5px 0;
-  color: #7f8c8d;
-}
+            // 计算各因子
+            const costRatio = C / R;
+            const costFactor = this.calcCostFactor(costRatio);
+            const reputationFactor = this.calcReputation(D, Dp, A);
+            const debtFactor = this.calcDebt(L, R);
+
+            // 总评分
+            const total = (costFactor + reputationFactor + debtFactor) * 100;
+            this.display(total);
+        }
+
+        calcCostFactor(ratio) {
+            return ratio <= 0.7 ? 
+                0.4 * (1 - Math.pow(ratio, 2)) : 
+                0.4 * Math.exp(-2 * (ratio - 0.7));
+        }
+
+        calcReputation(D, Dp, A) {
+            const delta = Dp ? Math.abs((D - Dp) / Dp) : 0;
+            return 0.3 * (1 - delta) * (A / 100);
+        }
+
+        calcDebt(L, R) {
+            return 0.3 * Math.tanh(L / (2 * R));
+        }
+
+        display(score) {
+            // 更新仪表盘
+            document.documentElement.style.setProperty('--score', Math.min(score, 100));
+            document.getElementById('finalScore').textContent = score.toFixed(1);
+        }
+    }
+
+    // 初始化计算器
+    new FinanceCalculator();
+    </script>
+</body>
 
 ![blog placeholder](/dashboard1.png)
 ![blog placeholder](/dashboard2.png)
