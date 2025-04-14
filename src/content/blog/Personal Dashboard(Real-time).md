@@ -124,42 +124,44 @@ term debt occupies a very exaggerated proportion.
 
 In summary, in order to evaluate the operational status of the company, I have divided the overall calculation into four parts: calculating the proportion of operating costs, measuring the health of cash flow, the degree of decline in dividends and reputation assets, and long-term debt issuance.
 
+You can calculate by this formula also, this website will not collect any information from you :)
+
 <body>
     <!-- 公式展示区 -->
     <div class="formula-card">
-        <h2>📈 财务健康公式</h2>
+        <h2>📈 Financial Health Formula </h2>
         <div class="formula-code">
-            <p>健康评分 = </p>
-            <p>0.4 × [1 - (成本/收入)²] (当成本率≤70%)</p>
-            <p>0.4 × e⁻²⁽成本率⁻⁰⋅⁷⁾ (当成本率>70%)</p>
-            <p>+ 0.3 × (1 - 分红波动率) × 声誉%</p>
-            <p>+ 0.3 × tanh(债务/(2×收入))</p>
+            <p>Health rate = </p>
+            <p>0.4 × [1 - (Cost/Revenue)²] (When ≤70%)</p>
+            <p>0.4 × e⁻²⁽Cost rate⁻⁰⋅⁷⁾ (Cost>70%)</p>
+            <p>+ 0.3 × (1 - Dividend volatility) × goodwill%</p>
+            <p>+ 0.3 × tanh(Debt/(2×Revenue))</p>
         </div>
     </div>
     <div class="calculator">
         <div class="input-grid">
             <div>
-                <label>年度收入（万元）</label>
+                <label>Revenue（Million）</label>
                 <input type="number" id="revenue" value="1000" step="100">
             </div>
             <div>
-                <label>运营成本（万元）</label>
+                <label>Operation Cost（Million）</label>
                 <input type="number" id="opCost" value="700" step="50">
             </div>
             <div>
-                <label>当期分红（万元）</label>
+                <label>Current dividends（Million）</label>
                 <input type="number" id="dividend" value="200" step="10">
             </div>
             <div>
-                <label>上期分红（万元）</label>
+                <label>Previous dividend distribution（Million）</label>
                 <input type="number" id="dividendPrev" value="200" step="10">
             </div>
             <div>
-                <label>声誉资产（0-100）</label>
+                <label>Goodwill rate（0-100）</label>
                 <input type="number" id="reputation" value="80" min="0" max="100">
             </div>
             <div>
-                <label>长期债务（万元）</label>
+                <label>Long debt（Million）</label>
                 <input type="number" id="longDebt" value="1500" step="100">
             </div>
         </div>
