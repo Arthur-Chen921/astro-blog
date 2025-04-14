@@ -136,8 +136,6 @@ In summary, in order to evaluate the operational status of the company, I have d
             <p>+ 0.3 × tanh(债务/(2×收入))</p>
         </div>
     </div>
-
-    <!-- 交互计算器 -->
     <div class="calculator">
         <div class="input-grid">
             <div>
@@ -165,13 +163,11 @@ In summary, in order to evaluate the operational status of the company, I have d
                 <input type="number" id="longDebt" value="1500" step="100">
             </div>
         </div>
-
         <div class="score-gauge">
             <div class="gauge-fill" style="--score: 0"></div>
             <div class="score-label">综合评分：<span id="finalScore">0</span></div>
         </div>
     </div>
-
     <script>
     class FinanceCalculator {
         constructor() {
@@ -181,7 +177,6 @@ In summary, in order to evaluate the operational status of the company, I have d
             ];
             this.init();
         }
-
         init() {
             // 绑定事件监听
             this.inputs.forEach(id => {
@@ -189,49 +184,40 @@ In summary, in order to evaluate the operational status of the company, I have d
             });
             this.update(); // 初始计算
         }
-
         getValue(id) {
             const el = document.getElementById(id);
             return el.value ? parseFloat(el.value) : 0;
         }
-
         update() {
             // 获取输入值
             const [R, C, D, Dp, A, L] = this.inputs.map(id => this.getValue(id));
-
             // 计算各因子
             const costRatio = C / R;
             const costFactor = this.calcCostFactor(costRatio);
             const reputationFactor = this.calcReputation(D, Dp, A);
             const debtFactor = this.calcDebt(L, R);
-
             // 总评分
             const total = (costFactor + reputationFactor + debtFactor) * 100;
             this.display(total);
         }
-
         calcCostFactor(ratio) {
             return ratio <= 0.7 ? 
                 0.4 * (1 - Math.pow(ratio, 2)) : 
                 0.4 * Math.exp(-2 * (ratio - 0.7));
         }
-
         calcReputation(D, Dp, A) {
             const delta = Dp ? Math.abs((D - Dp) / Dp) : 0;
             return 0.3 * (1 - delta) * (A / 100);
         }
-
         calcDebt(L, R) {
             return 0.3 * Math.tanh(L / (2 * R));
         }
-
         display(score) {
             // 更新仪表盘
             document.documentElement.style.setProperty('--score', Math.min(score, 100));
             document.getElementById('finalScore').textContent = score.toFixed(1);
         }
     }
-
     // 初始化计算器
     new FinanceCalculator();
     </script>
