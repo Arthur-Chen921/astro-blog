@@ -28,16 +28,13 @@ I have selected the top thirty Nasdaq stocks updated in real-time from yfinance.
 
 ```markdown
 Import yfinance as yf
-import pandas as pd
 # Define the tickers
 # I have selected thirty stocks from the Nasdaq component page on March 22nd
 ↪2025
 nasdaq = ['OPTN', 'UONEK', 'SCOR', 'AXON', 'STRS', 'CMRX', 'BSBK', 'FNLC',
 'NVCR', 'FNKO','NVEC', 'SLAB', 'MSBI', 'AGNC', 'NMRK', 'OPTX', 'IFRX', 'CVCO',
 ...]
-combined_income = pd.DataFrame()
-combined_balance = pd.DataFrame()
-combined_cashflow = pd.DataFrame()
+combined_data = pd.DataFrame()
 ```
 #### Part2.Data Cleaning
 > Convert data format
@@ -57,21 +54,17 @@ combined_cashflow = pd.DataFrame()
 ####### Don't forget to validate.
 
 ```markdown
-> In data collection, it is important to standardize the format at the beginning of the collection process and strictly classify the sources of data reporting
 > def handle_missing(df, threshold=0.75):
-      numeric_cols = df_cleaned.select_dtypes(include=np.number).columns.tolist()
       for col in numeric_cols:
           # Step 1: Fill in missing values with the historical mean of the same␣
           # Step 2: If the company has no historical data, fill in the entire␣
-
 def validate_missing(df, name):
     total_missing = df.select_dtypes(include=np.number).isnull().sum().sum()
     print(f"{name}total missing: {total_missing}")
-# Apply
 ```
+In data collection, it is important to standardize the format at the beginning of the collection process and strictly classify the sources of data reporting
 
-
-#### Part3.Data Visualizaion
+#### Part3.Data Visualizaion.
 
 
 I want to analyze the financial situation of these companies from shallow to deep. I need to have a rough estimate of their cash flow, study their income and expenditure situation, and attempt to break down the various components of their cash flow and understand their decisions. And judge from the final financial impact whether these decisions are effective.
