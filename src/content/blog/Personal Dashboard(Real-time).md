@@ -59,7 +59,6 @@ combined_cashflow = pd.DataFrame()
 ```markdown
 > In data collection, it is important to standardize the format at the beginning of the collection process and strictly classify the sources of data reporting
 > def handle_missing(df, threshold=0.75):
-      # Only process numerical columns
       numeric_cols = df_cleaned.select_dtypes(include=np.number).columns.tolist()
       for col in numeric_cols:
           # Step 1: Fill in missing values with the historical mean of the same␣
@@ -129,7 +128,7 @@ You can calculate by this formula also, this website will not collect any inform
 <body>
     <!-- 公式展示区 -->
     <div class="formula-card">
-        <h2>📈 Financial Health Formula </h2>
+        <h4>📈 Financial Health Formula </h4>
         <div class="formula-code">
             <p>Health rate = </p>
             <p>0.4 × [1 - (Cost/Revenue)²] (When ≤70%)</p>
