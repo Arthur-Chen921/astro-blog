@@ -7,7 +7,7 @@ heroImage: '/dashboard4.png'
 
 This is a data dashboard project I created while studying finance. Compared to the index provided by large websites, I am more eager to uncover the many details of economic operations.
 
-Check final<a href="https://arthur-chen921-data-ds-dl55d4.streamlit.app/">Dashboard</a>
+Check final <a href="https://arthur-chen921-data-ds-dl55d4.streamlit.app/">Dashboard</a>.
 
 ## Step decomposition
 
@@ -30,14 +30,11 @@ The reports on these websites are always incomplete, indicating that companies h
 Import yfinance as yf
 import pandas as pd
 # Define the tickers
-# I have selected thirty stocks from the Nasdaq component page on March 22nd␣
+# I have selected thirty stocks from the Nasdaq component page on March 22nd
 ↪2025
-nasdaq_30 = ['OPTN', 'UONEK', 'SCOR', 'AXON', 'STRS', 'CMRX', 'BSBK', 'FNLC',␣
-↪'NVCR', 'FNKO',
-'NVEC', 'SLAB', 'MSBI', 'AGNC', 'NMRK', 'OPTX', 'IFRX', 'CVCO',␣
-↪'TWST', 'STRT',
-'SCNI', 'NMRA', 'SDA', 'KLXE', 'JAGX', 'CEAD', 'NVCT', 'STRR',␣
-↪'BCG', 'SCNX']
+nasdaq = ['OPTN', 'UONEK', 'SCOR', 'AXON', 'STRS', 'CMRX', 'BSBK', 'FNLC',
+'NVCR', 'FNKO','NVEC', 'SLAB', 'MSBI', 'AGNC', 'NMRK', 'OPTX', 'IFRX', 'CVCO',
+...]
 combined_income = pd.DataFrame()
 combined_balance = pd.DataFrame()
 combined_cashflow = pd.DataFrame()
@@ -57,7 +54,7 @@ combined_cashflow = pd.DataFrame()
 ![blog placeholder](/afterclean.png)
 
 
-####### Don't forget to validate
+####### Don't forget to validate.
 
 ```markdown
 > In data collection, it is important to standardize the format at the beginning of the collection process and strictly classify the sources of data reporting
@@ -101,22 +98,73 @@ each Ticker, and then calculate the proportion of goodwill assets.
 
 ![blog placeholder](/scatter.png)
 
-
+The asset liability ratio is usually determined by the profitability and cost of a company. I compared
+the profit trend and cost control trend of SCNI to identify the underlying reasons for the decline
+in the asset liability r.But it still needs to be compared whether it has stickiness to shareholders
+and whether it really invests costs in the work environment ,to check if these changes are made for
+long term.
 
 ![blog placeholder](/SCNI1.png)
+
+After analyzing the funding trends of SCNI, I selected five more segmented categories of funding
+flows to examine the specific numbers. I directly selected from the previously defined table, using
+the date as the first column, and used red and black colors on three items to distinguish positive
+and negative numbers, in order to make better judgments.It can be seen that the consumption of
+working capital has surged ,and the Dividends remained the same amount.
+
 
 | Italics   | Bold     | Code   |
 | --------- | -------- | ------ |
 | _italics_ | **bold** | `code` |
 
 
-
-
 ![blog placeholder](/SCNI.png)
 
+After analyzing the flow of funds, I wanted to assess the company’s ability to withstand risks, so
+I introduced a long term debt issue outside of operating cash to observe its fund composition. As it was to observe the proportion of fund composition, I chose a pie chart.It can be seen that long
+term debt occupies a very exaggerated proportion.
 
 
 
 #### Outcome & Link
 
-I have created interactive websites for various indicators of this analysis. Please click to view my<a href="https://arthur-chen921-data-ds-dl55d4.streamlit.app/">Dashboard</a>
+<style>
+:root {
+  /* 输入变量 */
+  --revenue: 1000;
+  --op-cost: 700;       /* 显式高成本案例 */
+  --dividend: 200;      /* 当前分红 */
+  --dividend-pre: 200;  /* 上期分红 */
+  --reputation: 80;
+  --long-debt: 1500;    /* 高债务案例 */
+
+  /* 分段函数实现 */
+  --op-ratio: calc(var(--op-cost)/var(--revenue));
+  --cost-factor: clamp(0,
+    calc(
+      (var(--op-ratio) <= 0.7) 
+      ? 0.4*(1 - var(--op-ratio)*var(--op-ratio))
+      : 0.4*exp(-2*(var(--op-ratio) - 0.7))
+    ), 0.4
+  );
+
+  /* 分红稳定性计算 */
+  --div-change: calc(
+    abs((var(--dividend) - var(--dividend-pre)) / var(--dividend-pre))
+  );
+  --reputation-factor: calc(
+    0.3 * (1 - var(--div-change)) * var(--reputation)/100
+  );
+
+  /* 债务健康度计算 */
+  --debt-ratio: calc(var(--long-debt)/var(--revenue));
+  --debt-factor: calc(0.3 * tanh(var(--debt-ratio)/2));
+
+  /* 总评分 */
+  --score: calc(
+    (var(--cost-factor) + var(--reputation-factor) + var(--debt-factor)) * 100
+  );
+}
+</style>
+
+I have created interactive websites for various indicators of this analysis. Please click to view my <a href="https://arthur-chen921-data-ds-dl55d4.streamlit.app/">Dashboard</a>.
