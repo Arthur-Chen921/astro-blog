@@ -14,6 +14,8 @@ Due to my extensive work experience, I am able to understand the difficulties fa
 
 ![blog placeholder](/project1.png)
 
+I am good at presenting my ideas rather than just giving data. Sometimes you need to use metaphors and things around the other person to describe your research, and my planning and design work makes these presentations come into play.
+
 ![blog placeholder](/project2.png)
 ![blog placeholder](/project3.png)
 ![blog placeholder](/Prototype1.png)
