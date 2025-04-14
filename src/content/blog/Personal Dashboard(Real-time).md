@@ -113,11 +113,6 @@ and negative numbers, in order to make better judgments.It can be seen that the 
 working capital has surged ,and the Dividends remained the same amount.
 
 
-| Italics   | Bold     | Code   |
-| --------- | -------- | ------ |
-| _italics_ | **bold** | `code` |
-
-
 ![blog placeholder](/SCNI.png)
 
 After analyzing the flow of funds, I wanted to assess the company’s ability to withstand risks, so
@@ -125,47 +120,83 @@ I introduced a long term debt issue outside of operating cash to observe its fun
 term debt occupies a very exaggerated proportion.
 
 
-
 #### Outcome & Link
 
 In summary, in order to evaluate the operational status of the company, I have divided the overall calculation into four parts: calculating the proportion of operating costs, measuring the health of cash flow, the degree of decline in dividends and reputation assets, and long-term debt issuance.
-<style>
-:root {
-  /* 输入变量 */
-  --revenue: 1000;
-  --op-cost: 700;       /* 显式高成本案例 */
-  --dividend: 200;      /* 当前分红 */
-  --dividend-pre: 200;  /* 上期分红 */
-  --reputation: 80;
-  --long-debt: 1500;    /* 高债务案例 */
 
-  /* 分段函数实现 */
-  --op-ratio: calc(var(--op-cost)/var(--revenue));
-  --cost-factor: clamp(0,
-    calc(
-      (var(--op-ratio) <= 0.7) 
-      ? 0.4*(1 - var(--op-ratio)*var(--op-ratio))
-      : 0.4*exp(-2*(var(--op-ratio) - 0.7))
-    ), 0.4
-  );
+You can also calculate it by this formula, and this website will not collect any information from you.
+class FinanceHealthCalculator {
+  constructor() {
+    this.bindInputs();
+    this.updateCalculation();
+  }
 
-  /* 分红稳定性计算 */
-  --div-change: calc(
-    abs((var(--dividend) - var(--dividend-pre)) / var(--dividend-pre))
-  );
-  --reputation-factor: calc(
-    0.3 * (1 - var(--div-change)) * var(--reputation)/100
-  );
+  bindInputs() {
+    document.querySelectorAll('input').forEach(input => {
+      input.addEventListener('input', () => this.updateCalculation());
+    });
+  }
 
-  /* 债务健康度计算 */
-  --debt-ratio: calc(var(--long-debt)/var(--revenue));
-  --debt-factor: calc(0.3 * tanh(var(--debt-ratio)/2));
+  updateCalculation() {
+    const inputs = this.getInputValues();
+    const factors = this.calculateFactors(inputs);
+    this.displayResults(factors);
+  }
 
-  /* 总评分 */
-  --score: calc(
-    (var(--cost-factor) + var(--reputation-factor) + var(--debt-factor)) * 100
-  );
+  getInputValues() {
+    return {
+      revenue: parseFloat(document.getElementById('revenue').value) || 0,
+      opCost: parseFloat(document.getElementById('opCost').value) || 0,
+      dividend: parseFloat(document.getElementById('dividend').value) || 0,
+      dividendPrev: parseFloat(document.getElementById('dividendPrev').value) || 0,
+      reputation: parseFloat(document.getElementById('reputation').value) || 0,
+      longDebt: parseFloat(document.getElementById('longDebt').value) || 0
+    };
+  }
+
+  calculateFactors({revenue, opCost, dividend, dividendPrev, reputation, longDebt}) {
+    // 1. 成本因子计算
+    const costRatio = opCost / revenue;
+    let costFactor = 0;
+    if (costRatio <= 0.7) {
+      costFactor = 0.4 * (1 - Math.pow(costRatio, 2));
+    } else {
+      costFactor = 0.4 * Math.exp(-2 * (costRatio - 0.7));
+    }
+
+    // 2. 分红声誉因子
+    const dividendChange = Math.abs((dividend - dividendPrev) / dividendPrev) || 0;
+    const reputationFactor = 0.3 * (1 - dividendChange) * (reputation / 100);
+
+    // 3. 债务健康因子
+    const debtRatio = longDebt / revenue;
+    const debtFactor = 0.3 * Math.tanh(debtRatio / 2);
+
+    return {
+      costFactor: Math.min(costFactor, 0.4),
+      reputationFactor: Math.min(reputationFactor, 0.3),
+      debtFactor: Math.min(debtFactor, 0.3),
+      totalScore: (costFactor + reputationFactor + debtFactor) * 100
+    };
+  }
+
+  displayResults({costFactor, reputationFactor, debtFactor, totalScore}) {
+    // 更新仪表盘
+    document.documentElement.style.setProperty('--score', totalScore);
+    document.getElementById('finalScore').textContent = totalScore.toFixed(1);
+    
+    // 更新中间指标
+    document.getElementById('costFactor').textContent = costFactor.toFixed(3);
+    document.getElementById('reputationFactor').textContent = reputationFactor.toFixed(3);
+    document.getElementById('debtFactor').textContent = debtFactor.toFixed(3);
+  }
 }
-</style>
+
+// 初始化计算器
+new FinanceHealthCalculator();
+
+![blog placeholder](/dashboard1.png)
+![blog placeholder](/dashboard2.png)
+![blog placeholder](/dashboard3.png)
 
 I have created interactive websites for various indicators of this analysis. Please click to view my <a href="https://arthur-chen921-data-ds-dl55d4.streamlit.app/">Dashboard</a>.
