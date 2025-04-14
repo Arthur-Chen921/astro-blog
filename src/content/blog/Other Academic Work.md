@@ -1,7 +1,7 @@
 --- 
 title: 'Other Academic Work'
 description: 'Finance Track on Nasdaq'
-pubDate: 'Jul 08 2022'
+pubDate: 'Sep 08 2024'
 heroImage: '/nasdaq1.png'
 --- 
 
