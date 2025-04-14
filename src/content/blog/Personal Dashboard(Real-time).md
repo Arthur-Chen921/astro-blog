@@ -121,7 +121,7 @@ each Ticker, and then calculate the proportion of goodwill assets.
 
 
 
-![blog placeholder](/SCNI2.png)
+![blog placeholder](/SCNI.png)
 
 
 
