@@ -2,7 +2,7 @@
 title: 'Nasdaq_30 Analysis(Real-time)'
 description: 'Here is one of my work of Data collecting, cleaning, analyzing, and interactively presenting.'
 pubDate: 'Apr 19 2025'
-heroImage: '/blog-placeholder-1.jpg'
+heroImage: '/dashboard4.png'
 ---
 
 This is a data dashboard I created while studying finance. Compared to the index provided by large websites, I am more eager to uncover the many details of economic operations.
