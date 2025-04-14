@@ -128,6 +128,7 @@ term debt occupies a very exaggerated proportion.
 
 #### Outcome & Link
 
+In summary, in order to evaluate the operational status of the company, I have divided the overall calculation into four parts: calculating the proportion of operating costs, measuring the health of cash flow, the degree of decline in dividends and reputation assets, and long-term debt issuance.
 <style>
 :root {
   /* 输入变量 */
