@@ -24,7 +24,7 @@ The reports on these websites are always incomplete, indicating that companies h
 
 #### Part1.Data Collection
 
-##### I have selected the top thirty Nasdaq stocks updated in real-time from yfinance. Please note that re running them will update the latest list
+I have selected the top thirty Nasdaq stocks updated in real-time from yfinance. Please note that re running them will update the latest list.
 
 ```markdown
 Import yfinance as yf
