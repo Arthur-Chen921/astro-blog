@@ -2,9 +2,11 @@
 title: 'Photography'
 description: ''
 pubDate: 'Jul 22 2023'
-heroImage: '/blog-placeholder-2.jpg'
+heroImage: '/botanic1.jpg'
 ---
 
-#### botanic gardens dublin(Apr 05 2025)
-
-
+#### botanic gardens dublin
+![blog placeholder](/botanic1.jpg)
+![blog placeholder](/botanic2.jpg)
+![blog placeholder](/botanic3.jpg)
+![blog placeholder](/botanic4.jpg)
