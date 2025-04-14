@@ -1,5 +1,5 @@
 ---
-title: 'Markdown Style Guide'
+title: 'Nasdaq_30 Analysis(Real-time)'
 description: 'Here is a sample of some basic Markdown syntax that can be used when writing Markdown content in Astro.'
 pubDate: 'Jun 19 2024'
 heroImage: '/blog-placeholder-1.jpg'
@@ -50,8 +50,20 @@ The blockquote element represents content that is quoted from another source, op
 #### Syntax
 
 ```markdown
-> Tiam, ad mint andaepu dandae nostion secatur sequo quae.  
-> **Note** that you can use _Markdown syntax_ within a blockquote.
+> Import yfinance as yf
+import pandas as pd
+# Define the tickers
+# I have selected thirty stocks from the Nasdaq component page on March 22nd␣
+↪2025
+nasdaq_30 = ['OPTN', 'UONEK', 'SCOR', 'AXON', 'STRS', 'CMRX', 'BSBK', 'FNLC',␣
+↪'NVCR', 'FNKO',
+'NVEC', 'SLAB', 'MSBI', 'AGNC', 'NMRK', 'OPTX', 'IFRX', 'CVCO',␣
+↪'TWST', 'STRT',
+'SCNI', 'NMRA', 'SDA', 'KLXE', 'JAGX', 'CEAD', 'NVCT', 'STRR',␣
+↪'BCG', 'SCNX']
+combined_income = pd.DataFrame()
+combined_balance = pd.DataFrame()
+combined_cashflow = pd.DataFrame()
 ```
 
 #### Output
