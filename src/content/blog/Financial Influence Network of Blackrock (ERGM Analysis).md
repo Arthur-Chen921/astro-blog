@@ -1,9 +1,9 @@
 
 ---
-title: 'Mapping BlackRock's Capital Influence Network'
-description: 'A network analysis revealing how passive index funds shape industry landscapes through strategic holdings.'
-pubDate: 'Jul 18 2025'
-heroImage: '/network1.png'
+Title: 'Mapping BlackRock's Capital Influence Network'
+Description: 'A network analysis revealing how passive index funds shape industry landscapes through strategic holdings.'
+PubDate: 'Jul 18 2025'
+HeroImage: '/network1.png'
 ---
 
 While analyzing investment banks on SEC.gov, I observed an intriguing pattern: as other firms focus on equity trading, certain institutions like BlackRock quietly accumulate influence through thousands of strategic holdings. This project maps their cross-industry impact using public filings and network visualization.
