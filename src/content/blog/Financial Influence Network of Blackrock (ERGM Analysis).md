@@ -11,9 +11,9 @@ While analyzing investment banks on SEC.gov, I observed an intriguing pattern: a
 ## Methodology
 
 ### Data Sources
-- **SEC Form HF13 filings** (13F Holdings Reports)
-- **Public company ownership data** (market cap, sector classification)
-- **Policy influence scores** from industry regulatory databases
+SEC Form HF13 filings** (13F Holdings Reports)
+Public company ownership data** (market cap, sector classification)
+Policy influence scores** from industry regulatory databases
 
 ## Step Breakdown
 
