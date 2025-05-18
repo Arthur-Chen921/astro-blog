@@ -1,5 +1,3 @@
-
-
 --- 
 Title: 'Mapping BlackRock's Capital Influence Network'
 Description: 'A network analysis revealing how passive index funds shape industry landscapes through strategic holdings.'
