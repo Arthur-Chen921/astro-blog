@@ -1,25 +1,19 @@
 --- 
-title: 'Mapping BlackRock's Capital Influence Network'
-description: 'A network analysis revealing how passive index funds shape industry landscapes through strategic holdings.'
-pubDate: 'Jul 18 2025'
-heroImage: '/Network1.png'
+title: 'Other Academic Work'
+description: 'Research during Information and Statistic college, covering advanced statistical applications such as data prediction, chi square tests, and the use of ERGM etc.'
+pubDate: 'Sep 08 2024'
+heroImage: '/academy2.png'
 --- 
 
-While analyzing investment banks on SEC.gov, I observed an intriguing pattern: as other firms focus on equity trading, certain institutions like BlackRock quietly accumulate influence through thousands of strategic holdings. This project maps their cross-industry impact using public filings and network visualization.
+The information systems course at UCD covers most of the content in quantitative statistics, including AI auditing and machine learning. In addition, I am also self-learning more advanced knowledge such as normalization and first-order logic language models. The website will continue to track some of the assignments I have selected.
 
-## Methodology
+##### User Experience Report Analysis
 
-### Data Sources
-SEC Form HF13 filings** (13F Holdings Reports)
-Public company ownership data** (market cap, sector classification)
-Policy influence scores** from industry regulatory databases
-
-## Step Breakdown
-
-Data Collection
-SQL Processing
-Network Construction
-Sector Impact Analysis
-Visualization
+This is an analysis of user experience reports. The analysis covers the process of selecting statistical prediction methods by measuring sample size and features, and conducting statistical predictions. I used methods such as chi square test and beta test to try to draw a prediction formula.
+![blog placeholder](/academy1.png)
 
 
+##### Analysis of Social Network Connectivity
+
+This is an analysis of the Wikipedia online community. Starting from the influence factors of encyclopedia entries, this study examines the composition and influence distribution of various communities, as well as their changes in influence over a year, using specific users as links.
+![blog placeholder](/academy2.png)
