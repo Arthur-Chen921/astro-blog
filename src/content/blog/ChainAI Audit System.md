@@ -6,6 +6,9 @@ heroImage: '/Chain1.png'
 --- 
 
 
+Check the final outcome here:
+https://corporategovernance-chen.streamlit.app/
+
 **1. Scenario & Conflict Definition**  
 **Vertical Scenario**: Supplier Qualification Review in Supply Chain Procurement  
 **Typical Conflict Scenarios**:  
@@ -86,7 +89,7 @@ A three-phase governance method transforms AI conflicts into traceable organizat
   | Supplier relationship | Procurement | Customer Success + AI Committee | Satisfaction score maintained |  
 - **Control Points**:  
   - **Traceability**: Unique event IDs linked to supplier profiles.  
-  - **Quarterly Review**: Analyze AI误判 patterns to optimize models.  
+  - **Quarterly Review**: Analyze AI Misjudgment patterns to optimize models.  
   - **Cost Quantification**: Convert hidden compliance costs (e.g., legal due diligence hours) into decision parameters to prevent KPI-driven cost shifting.  
 
 ![blog placeholder](/Chain3.png)
@@ -115,7 +118,7 @@ A three-phase governance method transforms AI conflicts into traceable organizat
 - **Resolution**:  
   - Contract: Added "affiliated litigation disclosure" clause.  
   - Payment: Reduced upfront payment from 50% to 40%, final payment tied to litigation outcome.  
-  - AI Training: Legal AI no longer auto-freezes运输 disputes but triggers payment reviews.  
+  - AI Training: Legal AI no longer auto-freezes transportation disputes but triggers payment reviews.  
 
 **Phase 3: Execution & Feedback (30-Day Closure)**  
 - **Results**:  
@@ -140,13 +143,13 @@ A three-phase governance method transforms AI conflicts into traceable organizat
    - Reduces average resolution time from 3.5 days (manual) to 24h.  
    - **Decision Accountability Encoding** cuts cross-department communication costs by 50%.  
 2. **Accountability Clarity**:  
-   - **Event ID Tracing** resolves 94% of责任边界 disputes.  
+   - **Event ID Tracing** resolves 94% of duty boundary disputes.  
    - Arbitration outcomes link to department OKRs, preventing KPI evasion.  
 3. **Hidden Cost Visibility**:  
    - Quantifies compliance costs (e.g., $1,280/hr audit fees vs. supplier loss).  
    - Balances risk-cost-efficiency via data-driven KPIs.  
 4. **Knowledge Retention**:  
-   - Quarterly **AI误判 White Papers** improve training accuracy by 19%.  
+   - Quarterly **AI Misjudgment White Papers** improve training accuracy by 19%.  
    - **127 reusable decision templates** in the Risk Resolution Library.  
 
 **Organizational Adaptability**:  
