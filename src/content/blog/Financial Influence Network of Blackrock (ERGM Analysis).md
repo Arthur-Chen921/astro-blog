@@ -61,3 +61,6 @@ def generate_edges():
 #### Sector Impact
 Finding: 72% of tech policy changes correlate with BlackRock ownership (p<0.01).It is very interesting to study how passive index funds continue to achieve their soft impact through industry associations, policy lobbying, and influencing ESG pricing.
 In the future, I hope to study State Street and Vanguard, both passive index funds, and extract their lobbying documents to compare with the EU's leading development policy path.
+
+<a href="javascript:history.back()" class="back-button">← Back</a>
+
