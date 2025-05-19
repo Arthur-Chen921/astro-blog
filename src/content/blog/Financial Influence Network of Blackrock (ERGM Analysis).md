@@ -7,6 +7,9 @@ heroImage: '/Network1.png'
 
 While analyzing investment banks on SEC.gov, I observed an intriguing pattern: as other firms focus on equity trading, certain institutions like BlackRock quietly accumulate influence through thousands of strategic holdings. This project maps their cross-industry impact using public filings and network visualization.
 
+## Overview
+I cleaned the publicly available HF13 data and equity data of listed companies using SQL, and then organized the weight of Blackrock's holdings in hundreds of companies. Then, the market value, policies, and influence weights of these companies were compiled across the entire industry. I will turn the above two ideas into two edge lists and organize them in Gephi into sub industries, with varying degrees of influence from Blackrock.
+
 ### Data Sources
 - 13F Holdings Reports
 - Public company ownership data(market cap, sector classification)
@@ -40,24 +43,6 @@ WITH RECURSIVE SubsidiaryTree AS (
 )
 SELECT * FROM SubsidiaryTree;
 
-
-
----
-
-## Analysis Framework
-### SQL Hierarchy Processing
-```sql
-WITH RECURSIVE SubsidiaryTree AS (
-  SELECT parent_id, child_id, ownership_pct 
-  FROM company_relations
-  WHERE parent_id = 'BLACKROCK_INC'
-  UNION ALL
-  SELECT cr.parent_id, cr.child_id, cr.ownership_pct
-  FROM company_relations cr
-  JOIN SubsidiaryTree st ON cr.parent_id = st.child_id
-)
-SELECT * FROM SubsidiaryTree;
-```
 
 ### Gephi Network Parameters
 ```python
