@@ -1,5 +1,5 @@
 --- 
-title: 'Mapping BlackRock's Capital Influence Network'
+title: 'Mapping BlackRock Capital Influence Network'
 description: 'A network analysis revealing how passive index funds shape industry landscapes through strategic holdings.'
 pubDate: 'Dec 08 2024'
 heroImage: '/Network1.png'
