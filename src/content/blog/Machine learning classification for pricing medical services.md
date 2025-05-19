@@ -1,11 +1,12 @@
-<a href="javascript:history.back()" class="back-button">← Back</a>
-
 --- 
 title: 'Machine learning classification for pricing medical services'
 description: 'Research during Information and Statistic college, covering advanced statistical applications such as data prediction, chi square tests, and the use of ERGM etc.'
 pubDate: 'Feb 20 2025'
 heroImage: '/'
 --- 
+
+<a href="javascript:history.back()" class="back-button">← Back</a>
+
 
 The information systems course at UCD covers most of the content in quantitative statistics, including AI auditing and machine learning. In addition, I am also self-learning more advanced knowledge such as normalization and first-order logic language models. The website will continue to track some of the assignments I have selected.
 
