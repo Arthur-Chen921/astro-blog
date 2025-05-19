@@ -6,39 +6,28 @@ heroImage: '/Workflow1.png'
 ---  
 
 
+This automated data entry model was developed during my research on locally-deployed large language models, designed for seamless deployment across enterprises and organizations.
 
-The data I selected comes 
-from:https://meps.ahrq.gov/mepsweb/data_stats/Pub_ProdResults_Details.jsp?pt=Statistical%20Brief&opt=2&id=1308 
-This study analyzed the impact of medical services on pricing. 
-I first clarified my research goal to provide clearer pricing logic for healthcare service 
-providers. So I chose decision tree and neural network regression.
+To implement this technology, I established Dify's foundational architecture using Docker and Ollama, integrating chatbot capabilities with locally-hosted knowledge base retrieval. The on-premise knowledge repositories incorporate corporate regulations, data entry protocols, and operational databases, enabling the localized LLM to generate employee-centric data interactions precisely aligned with organizational standards. This solution significantly enhances operational efficiency while improving accountability visualization through standardized data workflows.
 
-###
+The system workflow initiates with HTTP request authentication, automatically locking user access levels within the data hierarchy. An intelligent question classifier then directs users to appropriate task modules. Employees can engage in three core interactions: 
+1) **Compliance Training** via conversational scenarios with the chatbot
+2) **Data Retrieval** with automatic visualization tools that generate structured reports (fully customizable templates)
+3) **Automated Data Entry** - the system's flagship feature
 
-Because healthcare providers have a significant differentiation in service types and 
-operations, I hope to use these contents as inputs to maximize the inclusiveness of the 
-model. I used a standardizer and saved the model parameters 
-In order to automate the entire process using scaler in the subsequent pricing analysis. 
+When executing data entry tasks, the system:
+- Logs user operations with audit trails
+- Provides intelligent data cleansing with integrity verification to protect critical information
+- Processes standardized data through configured formulas
+- Cross-references preset thresholds (risk indexes/profit margins) and external data sources
+- Triggers real-time alerts to designated managers when hitting cost warnings or KPI targets
 
-## Methodology:
+The locally-deployed architecture ensures complete control over corporate knowledge assets while maintaining: 
+- Automatic synchronization of latest regulations into workflows
+- Context-aware data validation against enterprise-specific criteria
+- Secure integration with existing on-premise databases
 
-Decision Tree was employed to identify critical thresholds of service quality indicators (e.g., specialist availability, equipment level), creating rule-based segmentation of healthcare institutions.
-
-K-means Clustering categorized providers into three distinct groups based on operational efficiency metrics derived from service capacity and cost structures.
-
-Neural Network Regression (MLP-based) predicted optimal pricing ranges by learning non-linear relationships between service features, operational clusters, and historical pricing patterns.
-
-### Technical Implementation:
-
-A standardized pipeline integrating MinMaxScaler for feature normalization and model components was containerized for deployment.
-
-The modular system allows providers to input weighted features corresponding to their strategic priorities (e.g., premium services vs cost efficiency), generating customized price suggestions through dynamic model orchestration.
-
-This framework demonstrates how interpretable machine learning techniques can bridge operational analytics with market-responsive pricing strategies in healthcare services.
-
-![blog placeholder](/Workflow2.png)
-
-###
+All components support modular replacement, allowing organizations to maintain system evolution aligned with operational needs without infrastructure overhaul.
 
 cluster
 ![blog placeholder](/Workflow3.png)
