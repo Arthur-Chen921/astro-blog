@@ -51,27 +51,6 @@ def generate_edges():
         yield f"BLK,{company.ticker},{company.effective_ownership}"
         yield f"{company.ticker},{company.sector},{company.influence_score}"
 
-```markdown
-#astro-blog/src/content/blog/Personal Dashboard(Real-time).md
-
----
-title: 'Personal Dashboard (Real-time)'
-description: 'Real-time financial analytics dashboard for Nasdaq companies'
-pubDate: 'Apr 12 2025'
-heroImage: '/dashboard4.png'
----
-
-This dashboard tracks 30 Nasdaq stocks with Python/YFinance data pipeline.  
-**Live Demo**: <a href="https://arthur-chen921-data-ds-dl55d4.streamlit.app/" target="_blank">Open Dashboard</a>.
-
-## Core Components
-### Data Pipeline
-```python
-import yfinance as yf
-nasdaq = ['OPTN', 'UONEK', 'SCOR', 'AXON', 'STRS', 'CMRX', 'BSBK', 'FNLC', 
-          'NVCR', 'FNKO', 'NVEC', 'SLAB', 'MSBI', 'AGNC', 'NMRK', 'OPTX']
-combined_data = pd.DataFrame()
-```
 
 ### Health Metrics Formula
 ```html
