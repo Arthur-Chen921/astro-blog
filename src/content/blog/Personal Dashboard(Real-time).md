@@ -222,3 +222,7 @@ You can calculate by this formula also, this website will not collect any inform
 ![blog placeholder](/dashboard3.png)
 
 I have created interactive websites for various indicators of this analysis. Please click to view my <a href="https://arthur-chen921-data-ds-dl55d4.streamlit.app/">Dashboard</a>.
+
+
+<a href="javascript:history.back()" class="back-button">← Back</a>
+
