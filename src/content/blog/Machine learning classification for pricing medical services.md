@@ -14,7 +14,7 @@ This is an analysis of user experience reports. The analysis covers the process 
 ![blog placeholder](/academy1.png)
 
 
-<a href="javascript:history.back()" class="back-button">← Back</a>
+<a href="javascript:history.back()" class="back-button">← ###Back</a>
 
 ##### Analysis of Social Network Connectivity
 
