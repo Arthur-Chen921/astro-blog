@@ -6,14 +6,11 @@ heroImage: '/Neural2.png'
 ---  
 
 
-
 The data I selected comes 
 from:https://meps.ahrq.gov/mepsweb/data_stats/Pub_ProdResults_Details.jsp?pt=Statistical%20Brief&opt=2&id=1308 
 This study analyzed the impact of medical services on pricing. 
 I first clarified my research goal to provide clearer pricing logic for healthcare service 
 providers. So I chose decision tree and neural network regression.
-
-###
 
 Because healthcare providers have a significant differentiation in service types and 
 operations, I hope to use these contents as inputs to maximize the inclusiveness of the 
@@ -23,6 +20,7 @@ In order to automate the entire process using scaler in the subsequent pricing a
 ## Methodology:
 
 Decision Tree was employed to identify critical thresholds of service quality indicators (e.g., specialist availability, equipment level), creating rule-based segmentation of healthcare institutions.
+![blog placeholder](/Neural1.png)
 
 K-means Clustering categorized providers into three distinct groups based on operational efficiency metrics derived from service capacity and cost structures.
 
@@ -34,17 +32,13 @@ A standardized pipeline integrating MinMaxScaler for feature normalization and m
 
 The modular system allows providers to input weighted features corresponding to their strategic priorities (e.g., premium services vs cost efficiency), generating customized price suggestions through dynamic model orchestration.
 
-This framework demonstrates how interpretable machine learning techniques can bridge operational analytics with market-responsive pricing strategies in healthcare services.
-
-![blog placeholder](/Neural1.png)
-
-###
-
-cluster
 ![blog placeholder](/Neural2.png)
 ![blog placeholder](/Neural3.png)
 
-### Pricing
+### Prcing
+
+This framework demonstrates how interpretable machine learning techniques can bridge operational analytics with market-responsive pricing strategies in healthcare services.
+
 ![blog placeholder](/Neural4.png)
 
 
