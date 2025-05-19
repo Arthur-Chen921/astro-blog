@@ -91,7 +91,6 @@ A three-phase governance method transforms AI conflicts into traceable organizat
 
 ![blog placeholder](/Chain3.png)
 
----  
 
 **4. Why It Solves the Problem?**  
 1. **Goal Conflicts → Arbitrable Issues**:  
