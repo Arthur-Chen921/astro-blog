@@ -14,9 +14,9 @@ This is an analysis of user experience reports. The analysis covers the process 
 ![blog placeholder](/academy1.png)
 
 
-<a href="javascript:history.back()" class="back-button">← ###Back</a>
-
 ##### Analysis of Social Network Connectivity
 
 This is an analysis of the Wikipedia online community. Starting from the influence factors of encyclopedia entries, this study examines the composition and influence distribution of various communities, as well as their changes in influence over a year, using specific users as links.
 ![blog placeholder](/academy2.png)
+
+<a href="javascript:history.back()" class="back-button">← Back</a>
