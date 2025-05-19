@@ -11,7 +11,7 @@ The data I selected comes
 from:https://meps.ahrq.gov/mepsweb/data_stats/Pub_ProdResults_Details.jsp?pt=Statistical%20Brief&opt=2&id=1308 
 This study analyzed the impact of medical services on pricing. 
 I first clarified my research goal to provide clearer pricing logic for healthcare service 
-providers. So I chose decision tree and neural network regression
+providers. So I chose decision tree and neural network regression.
 
 ###
 
@@ -20,7 +20,7 @@ operations, I hope to use these contents as inputs to maximize the inclusiveness
 model. I used a standardizer and saved the model parameters 
 In order to automate the entire process using scaler in the subsequent pricing analysis. 
 
-Methodology:
+## Methodology:
 
 Decision Tree was employed to identify critical thresholds of service quality indicators (e.g., specialist availability, equipment level), creating rule-based segmentation of healthcare institutions.
 
@@ -28,7 +28,7 @@ K-means Clustering categorized providers into three distinct groups based on ope
 
 Neural Network Regression (MLP-based) predicted optimal pricing ranges by learning non-linear relationships between service features, operational clusters, and historical pricing patterns.
 
-Technical Implementation:
+### Technical Implementation:
 
 A standardized pipeline integrating MinMaxScaler for feature normalization and model components was containerized for deployment.
 
@@ -50,8 +50,7 @@ cluster
 
 #### Markdown: 
 The data from CDC is enormous, containing hundreds of features. There are countless 
-research paths, and based on the machine learning models in the classroom, we can 
-adopt different model combinations according to different purposes, such as 
+research paths, we can adopt different model combinations according to different purposes, such as:
 1. Cost driven factor analysis (interpretability model) 
 *What the model does: Identify which input features (such as complications, medication plans, 
 etc.) contribute the most to predicting costs. 
