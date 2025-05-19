@@ -1,143 +1,169 @@
 --- 
 title: 'ChainAI Audit System'
-description: 'Research during Information and Statistic college, covering advanced statistical applications such as data prediction, chi square tests, and the use of ERGM etc.'
-pubDate: 'Sep 08 2024'
-heroImage: '/academy2.png'
+description: 'This is a Deloitte Corporate Governance competition project. The topic I have set is the audit methods for enterprises applying AI for governance.'
+pubDate: 'Mar 29 2025'
+heroImage: '/Chain1.png'
 --- 
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Cross-departmental AI Arbitration Workflow Solution</title>
-</head>
-<body>
-    <h1>I. Scenario & Conflict Definition</h1>
-    <h2>Vertical Scenario: Supplier Qualification Review in Supply Chain Procurement</h2>
-    <h3>Typical Conflict Scenarios:</h3>
-    <ul>
-        <li>
-            <strong>Efficiency vs Compliance Conflict:</strong>
-            <ul>
-                <li>Procurement Dept: Uses AI to auto-approve low-risk suppliers with complete qualifications to shorten cycles</li>
-                <li>Tech Stack: Machine Learning (historical cooperation data + business info scraping) + RPA auto-form filling</li>
-                <li>Legal Dept: Legal AI detects litigation records in supplier-affiliated enterprises, requires process freeze</li>
-                <li>Tech Stack: NLP (real-time court document monitoring) + Knowledge Graph (affiliated enterprise analysis)</li>
-                <li>Finance Dept: Discovers supplier quotes exceed historical average by 12%, initiates renegotiation</li>
-                <li>Tech Stack: Time-series forecasting (3-year price analysis) + Dynamic cost modeling</li>
-            </ul>
-        </li>
-        <li>
-            <strong>Data Interpretation Conflicts:</strong>
-            <ul>
-                <li>Procurement: Recommends suppliers based on delivery capability scores</li>
-                <li>Legal: AI detects ambiguous contract terms requiring revision</li>
-                <li>Finance: Identifies payment terms conflicting with cash flow forecasts</li>
-            </ul>
-        </li>
-    </ul>
 
-    <h3>Core Challenges:</h3>
-    <ul>
-        <li>Goal conflicts: Efficiency vs Compliance vs Cost Control</li>
-        <li>Decision silos: Independent departmental AI systems</li>
-        <li>Coordination inefficiency: Manual coordination causing supplier loss</li>
-    </ul>
+**1. Scenario & Conflict Definition**  
+**Vertical Scenario**: Supplier Qualification Review in Supply Chain Procurement  
+**Typical Conflict Scenarios**:  
+1. **Efficiency vs. Compliance Conflict**:  
+   - **Procurement Department**: Uses AI to automatically approve low-risk suppliers with complete qualifications to shorten procurement cycles.  
+     - *Tech Stack*: Machine learning (historical collaboration data + business registration information scraping) + RPA for automated form filling.  
+   - **Legal Department**: Legal AI detects litigation records involving the supplier’s affiliated companies, requiring process suspension.  
+     - *Tech Stack*: NLP (real-time monitoring of China Judgments Online) + Knowledge Graph (affiliated company penetration analysis).  
+   - **Finance Department**: Identifies that supplier quotes exceed historical average prices in AI models, triggering renegotiation.  
+     - *Tech Stack*: Time series forecasting (3-year price fluctuation analysis) + dynamic cost modeling.  
 
-    <h1>II. Specific Conflict Scenario (Simplified)</h1>
-    <p><strong>Time:</strong> March 2024</p>
-    <p><strong>Trigger Event:</strong> New supplier "Ruifeng Precision" applies for battery tray supply qualification</p>
-    
-    <h3>1. Procurement Specialist Wang Yue (Efficiency-oriented):</h3>
-    <ul>
-        <li>System verifies complete qualifications (Tax Class A, certifications)</li>
-        <li>Submits e-contract to Legal/Finance departments</li>
-    </ul>
+2. **Data Interpretation Conflict**:  
+   - **Procurement**: Recommends partnerships based on supplier delivery capability scores.  
+   - **Legal**: AI scans contracts and flags ambiguous clauses, demanding manual revision.  
+   - **Finance**: Detects conflicts between payment terms and cash flow forecasts, suggesting adjustments to payment timelines.  
 
-    <h3>2. Legal Manager Zhang Tao (Risk-sensitive):</h3>
-    <ul>
-        <li>NLP system finds controller's affiliated company involved in ongoing transport dispute</li>
-        <li>Email alert: "Recommend postponing signing pending risk clarification"</li>
-    </ul>
+**Core Pain Points**:  
+- **Goal Conflicts**: Procurement prioritizes efficiency, Legal emphasizes compliance, Finance focuses on cost control.  
+- **Decision Silos**: Departmental AI systems operate independently without holistic oversight.  
+- **Coordination Challenges**: Manual coordination is time-consuming, with blurred accountability between model decisions and human responsibilities, leading to supplier attrition.  
 
-    <h3>3. Finance Director Chen Min (Cost Control):</h3>
-    <ul>
-        <li>Time-series model shows 12% price increase over 3-year average (±5% acceptable)</li>
-        <li>System note: "Recommend renegotiation to meet quarterly cost targets"</li>
-    </ul>
+---  
 
-    <h1>III. Solution Design</h1>
-    <h2>"Chain Intelligence Review" Cross-department AI Arbitration Workflow</h2>
-    <p>Three-phase governance methodology converting AI conflicts into traceable organizational decisions</p>
+**2. Specific Conflict Scenario (Simplified)**  
+**Time**: March 2024  
+**Trigger Event**: New supplier "Ruifeng Precision" applies for battery tray supply qualification.  
+1. **Procurement Specialist Wang Yue (Efficiency-Oriented)**:  
+   - System confirms supplier qualifications (Tax Class A, certifications complete), recommends direct contract signing.  
+   - Submits e-contract to Legal/Finance.  
+2. **Legal Manager Zhang Tao (Risk-Averse)**:  
+   - NLP system identifies unresolved transportation contract disputes involving another company owned by the supplier’s actual controller.  
+   - Email alert to Procurement: "Recommend delaying signing; supplementary risk disclosure required."  
+3. **Finance Director Chen Min (Cost-Focused)**:  
+   - Time series model shows current quote is 12% above 3-year average, exceeding acceptable fluctuation (±5%).  
+   - Internal system flag: "Recommend renegotiation to avoid missing quarterly cost-saving targets."  
 
-    <h3>Phase 1: Conflict Identification & Classification (Automated)</h3>
-    <table border="1">
-        <tr>
-            <th>Conflict Type</th>
-            <th>Processing Channel</th>
-            <th>Time Limit</th>
-        </tr>
-        <tr>
-            <td>Single metric exceedance</td>
-            <td>Auto-initiate compensation negotiation</td>
-            <td>2h</td>
-        </tr>
-        <tr>
-            <td>Dual-target conflict</td>
-            <td>Department joint pre-review</td>
-            <td>8h</td>
-        </tr>
-        <tr>
-            <td>Triple conflict + confidence variance</td>
-            <td>Submit to AI Arbitration Committee</td>
-            <td>24h</td>
-        </tr>
-    </table>
+---  
 
-    <h3>Phase 2: Decision Arbitration (Human-AI Collaboration)</h3>
-    <ul>
-        <li><strong>Execution Body:</strong> Cross-department AI Arbitration Committee</li>
-        <li><strong>Components:</strong>
-            <ul>
-                <li>Supply Chain Director (Chair)</li>
-                <li>Department deputies + Internal Audit</li>
-            </ul>
-        </li>
-    </ul>
+**3. Solution Design**  
+**"ChainAI Judge" Cross-Departmental AI Arbitration Workflow**  
+A three-phase governance method transforms AI conflicts into traceable organizational decisions, managing technical complexity through predefined rules.  
 
-    <h3>Phase 3: Execution & Feedback (Closed-loop Control)</h3>
-    <table border="1">
-        <tr>
-            <th>Task</th>
-            <th>Executor</th>
-            <th>Supervisor</th>
-            <th>Acceptance Criteria</th>
-        </tr>
-        <tr>
-            <td>Contract revision</td>
-            <td>Legal Dept</td>
-            <td>Audit Dept</td>
-            <td>Risk score < threshold</td>
-        </tr>
-        <tr>
-            <td>Payment adjustment</td>
-            <td>Finance Dept</td>
-            <td>Arbitration Committee</td>
-            <td>Cash flow deviation <5%</td>
-        </tr>
-    </table>
-
-    <!-- Continue translating and formatting remaining sections following same pattern -->
-
-</body>
-</html>
-
+**Phase 1: Conflict Identification & Classification (Automated)**  
+- **System**: Supply Chain Governance AI Tagging System  
+- **Inputs**:  
+  - Daily: Summaries of departmental AI standards and tool documentation.  
+  - Emergency: Legal AI risk ratings + Finance AI cost deviation reports + Procurement AI supplier metrics.  
+- **Workflow**:  
+  1. Activate **Pre-Processing Matrix**:  
+     | Conflict Type            | Resolution Channel          | Time Limit |  
+     |--------------------------|-----------------------------|------------|  
+     | Single metric outrate        | Auto-compensation negotiation | 2h         |  
+     | Dual-goal conflict       | Departmental pre-review     | 8h         |  
+     | Triple conflict + Confidence difference | Escalate to AI Arbitration  | 24h        |  
+  2. Generate **Conflict Summary Report** highlighting departmental outputs.  
+  3. Prepare for Phase 2: Decision Arbitration.
 ![blog placeholder](/Chain1.png)
+
+**Phase 2: Decision Arbitration (Human-AI Collaboration)**  
+- **Executor**: Cross-Departmental AI Arbitration Committee  
+- **Participants**:  
+  - Chair: Supply Chain Director  
+  - Members: Deputy heads of Procurement, Legal, Finance + Internal Audit.  
+- **Process**:  
+  1. **Preparation (Automated)**:  
+     - Extract historical case resolutions tagged with governance responsibility types.  
+     - Generate impact prediction dashboard (supplier attrition probability/compliance risk score/cost fluctuation range).  
+  2. **Output**:  
+     - Conditional execution instructions (e.g., "Approve but increase performance bond").  
+     - Update training data labels for all three AIs.  
 ![blog placeholder](/Chain2.png)
+**Phase 3: Execution & Feedback (Closed-Loop Control)**  
+- **Responsibility Matrix**:  
+  | Task                  | Owner     | Supervisor       | Success Criteria                  |  
+  |-----------------------|-----------|------------------|------------------------------------|  
+  | Contract revision     | Legal     | Internal Audit   | Risk score < threshold            |  
+  | Payment adjustment    | Finance   | Arbitration AI   | Cash flow deviation <5%           |  
+  | Supplier relationship | Procurement | Customer Success + AI Committee | Satisfaction score maintained |  
+- **Control Points**:  
+  - **Traceability**: Unique event IDs linked to supplier profiles.  
+  - **Quarterly Review**: Analyze AI误判 patterns to optimize models.  
+  - **Cost Quantification**: Convert hidden compliance costs (e.g., legal due diligence hours) into decision parameters to prevent KPI-driven cost shifting.  
+
 ![blog placeholder](/Chain3.png)
+
+---  
+
+**4. Why It Solves the Problem?**  
+1. **Goal Conflicts → Arbitrable Issues**:  
+   - *Conflict Classification Matrix* converts abstract conflicts into actionable types (e.g., "efficiency vs. compliance" triggers dual-goal resolution).  
+2. **Decision Silos → Unified Baseline**:  
+   - Arbitration mandates transparent AI decision logic (e.g., Legal AI must cite specific laws).  
+   - Shared impact prediction models eliminate departmental data biases.  
+3. **Coordination Inefficiency → Standardized Response**:  
+   - Reduces resolution time from 2-3 days (manual) to ≤24h (automated).  
+   - Builds a **Conflict Resolution Knowledge Base** to accelerate future decisions.  
+
+---  
+
+**5. Implementation Case: "Ruifeng Precision" Resolution & Outcome**  
+**Phase 1: Conflict Identification (Initiated within 24h)**  
+- Trigger: Triple conflict (Procurement AI approval + Legal AI freeze + Finance AI renegotiation) activates 24h arbitration.  
+
+**Phase 2: Arbitration (Human-AI Collaboration)**  
+- **Committee Actions**:  
+  - Reviewed historical cases (similar litigation + premium suppliers).  
+  - System predictions: 68% attrition probability vs. 0.62 compliance risk score.  
+- **Resolution**:  
+  - Contract: Added "affiliated litigation disclosure" clause.  
+  - Payment: Reduced upfront payment from 50% to 40%, final payment tied to litigation outcome.  
+  - AI Training: Legal AI no longer auto-freezes运输 disputes but triggers payment reviews.  
+
+**Phase 3: Execution & Feedback (30-Day Closure)**  
+- **Results**:  
+  | Task                  | Outcome                              |  
+  |-----------------------|--------------------------------------|  
+  | Contract revision     | Risk score reduced to 0.58 (reach the standard)     |  
+  | Payment adjustment    | Cost deviation at 4.9% (<5%)         |  
+  | Supplier relationship | Satisfaction score maintained at 82  |  
+
+**Phase 4: AI Governance Upgrade**  
+- Legal AI: Reduced risk weighting for affiliates with <20% ownership.  
+- Finance AI: Added "emergency procurement premium" exemption.  
+- Added 1 case to the **Cross-Departmental Collaboration Library**.  
+
 ![blog placeholder](/Chain5.png)
 
+---  
 
+**6. Core Advantages**  
+**Structural Advantages**:  
+1. **Conflict Resolution Efficiency**:  
+   - Reduces average resolution time from 3.5 days (manual) to 24h.  
+   - **Decision Accountability Encoding** cuts cross-department communication costs by 50%.  
+2. **Accountability Clarity**:  
+   - **Event ID Tracing** resolves 94% of责任边界 disputes.  
+   - Arbitration outcomes link to department OKRs, preventing KPI evasion.  
+3. **Hidden Cost Visibility**:  
+   - Quantifies compliance costs (e.g., $1,280/hr audit fees vs. supplier loss).  
+   - Balances risk-cost-efficiency via data-driven KPIs.  
+4. **Knowledge Retention**:  
+   - Quarterly **AI误判 White Papers** improve training accuracy by 19%.  
+   - **127 reusable decision templates** in the Risk Resolution Library.  
+
+**Organizational Adaptability**:  
+1. **Incremental Implementation**:  
+   - Compatible with companies of varying sizes/digital maturity via modular routing.  
+   - Low-code tools (e.g., Finance’s threshold adjustment plugin) ease transitions.  
+2. **Supply Chain Empowerment**:  
+   - Shares risk assessment models with suppliers for collaboration efficiency.  
+   - Monitors supplier AI health to preempt risks.
+
+
+
+
+
+
+Check the final outcome:
 https://corporategovernance-chen.streamlit.app/
 
 
