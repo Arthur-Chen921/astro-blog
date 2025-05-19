@@ -1,3 +1,5 @@
+<a href="javascript:history.back()" class="back-button">← Back</a>
+
 --- 
 title: 'Machine learning classification for pricing medical services'
 description: 'Research during Information and Statistic college, covering advanced statistical applications such as data prediction, chi square tests, and the use of ERGM etc.'
