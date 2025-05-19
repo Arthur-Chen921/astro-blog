@@ -1,9 +1,9 @@
---- 
+---  
 title: 'Machine learning classification for pricing medical services'
-description: 'This study investigates the impact of medical service characteristics on pricing strategies through a structured machine learning framework. The research goal focuses on establishing a data-driven pricing recommendation system tailored to healthcare providers' operational priorities..'
+description: 'This study investigates the impact of medical service characteristics on pricing strategies through a structured machine learning framework. The research goal focuses on establishing a data-driven pricing recommendation system tailored to healthcare providers' operational priorities.'
 pubDate: 'Feb 20 2025'
 heroImage: '/Neural2.png'
---- 
+---  
 
 
 
