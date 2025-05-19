@@ -14,12 +14,23 @@ This study analyzed the impact of medical services on pricing.
 I first clarified my research goal to provide clearer pricing logic for healthcare service 
 providers. So I chose decision tree and neural network regression
 
-
+###
 
 Because healthcare providers have a significant differentiation in service types and 
 operations, I hope to use these contents as inputs to maximize the inclusiveness of the 
 model. I used a standardizer and saved the model parameters 
 In order to automate the entire process using scaler in the subsequent pricing analysis. 
+
+![blog placeholder](/Neural1.png)
+
+###
+
+cluster
+![blog placeholder](/Neural2.png)
+![blog placeholder](/Neural3.png)
+
+### Pricing
+![blog placeholder](/Neural4.png)
 
 
 #### Markdown: 
