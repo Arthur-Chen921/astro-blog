@@ -19,6 +19,6 @@ I am good at presenting my ideas rather than just giving data. Sometimes you nee
 ![blog placeholder](/project2.png)
 ![blog placeholder](/project3.png)
 
-<a href="javascript:history.back()" class="back-button">← Back</a>
-
 ![blog placeholder](/Prototype1.png)
+
+<a href="javascript:history.back()" class="back-button">← Back</a>
