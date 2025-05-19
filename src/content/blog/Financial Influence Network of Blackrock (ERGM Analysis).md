@@ -83,14 +83,6 @@ combined_data = pd.DataFrame()
 
 ---
 
-#astro-blog/src/content/blog/BlackRock Network Influence Analysis.md
-
----
-title: "BlackRock's Capital Network"
-description: "Mapping passive fund influence through ownership networks"
-pubDate: 'Jul 18 2025'
-heroImage: '/network1.png'
----
 
 ## Analysis Framework
 ### SQL Hierarchy Processing
@@ -115,6 +107,5 @@ AAPL -> Tech_Sector : 0.87 influence_score
 ```
 
 ### Sector Impact
-![Sector Influence](/sector-bubbles.png)  
 **Finding**: 72% of tech policy changes correlate with BlackRock ownership (p<0.01)
 ```
