@@ -10,7 +10,10 @@ The information systems course at UCD covers most of the content in quantitative
 ##### User Experience Report Analysis
 
 This is an analysis of user experience reports. The analysis covers the process of selecting statistical prediction methods by measuring sample size and features, and conducting statistical predictions. I used methods such as chi square test and beta test to try to draw a prediction formula.
-![blog placeholder](/academy1.png)
+![blog placeholder](/Chain1.png)
+![blog placeholder](/Chain2.png)
+![blog placeholder](/Chain3.png)
+![blog placeholder](/Chain5.png)
 
 ##### Analysis of Social Network Connectivity
 
