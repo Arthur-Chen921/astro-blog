@@ -10,9 +10,9 @@ While analyzing investment banks on SEC.gov, I observed an intriguing pattern: a
 ## Methodology
 
 ### Data Sources
-SEC Form HF13 filings** (13F Holdings Reports)
-Public company ownership data** (market cap, sector classification)
-Policy influence scores** from industry regulatory databases
+- 13F Holdings Reports
+- Public company ownership data(market cap, sector classification)
+- Policy influence scores from industry regulatory databases
 
 ## Step Breakdown
 
@@ -44,12 +44,6 @@ WITH RECURSIVE SubsidiaryTree AS (
 )
 SELECT * FROM SubsidiaryTree;
 
-
-# Gephi edge list export snippet
-def generate_edges():
-    for company in resolved_holdings:
-        yield f"BLK,{company.ticker},{company.effective_ownership}"
-        yield f"{company.ticker},{company.sector},{company.influence_score}"
 
 
 ### Health Metrics Formula
@@ -84,6 +78,13 @@ SELECT * FROM SubsidiaryTree;
 BLK -> AAPL : 5.2% effective ownership  
 AAPL -> Tech_Sector : 0.87 influence_score
 ```
+
+# Gephi edge list export snippet
+def generate_edges():
+    for company in resolved_holdings:
+        yield f"BLK,{company.ticker},{company.effective_ownership}"
+        yield f"{company.ticker},{company.sector},{company.influence_score}"
+
 
 ### Sector Impact
 **Finding**: 72% of tech policy changes correlate with BlackRock ownership (p<0.01)
