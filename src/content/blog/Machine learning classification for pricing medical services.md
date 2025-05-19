@@ -5,8 +5,6 @@ pubDate: 'Feb 20 2025'
 heroImage: '/'
 --- 
 
-<a href="javascript:history.back()" class="back-button">← Back</a>
-
 
 The information systems course at UCD covers most of the content in quantitative statistics, including AI auditing and machine learning. In addition, I am also self-learning more advanced knowledge such as normalization and first-order logic language models. The website will continue to track some of the assignments I have selected.
 
@@ -15,6 +13,8 @@ The information systems course at UCD covers most of the content in quantitative
 This is an analysis of user experience reports. The analysis covers the process of selecting statistical prediction methods by measuring sample size and features, and conducting statistical predictions. I used methods such as chi square test and beta test to try to draw a prediction formula.
 ![blog placeholder](/academy1.png)
 
+
+<a href="javascript:history.back()" class="back-button">← Back</a>
 
 ##### Analysis of Social Network Connectivity
 
