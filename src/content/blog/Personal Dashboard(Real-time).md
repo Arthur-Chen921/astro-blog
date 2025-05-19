@@ -1,5 +1,5 @@
 ---
-title: 'Personal Dashboard(Real-time)'
+title: 'Personal Dashboard (Real-time)'
 description: 'Here is one of my work of Data collecting, cleaning, analyzing, and interactively presenting.'
 pubDate: 'Apr 12 2025'
 heroImage: '/dashboard4.png'
