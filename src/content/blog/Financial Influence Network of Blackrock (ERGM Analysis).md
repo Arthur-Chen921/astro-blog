@@ -1,20 +1,16 @@
 --- 
 title: 'Mapping BlackRock Capital Influence Network'
 description: 'A network analysis revealing how passive index funds shape industry landscapes through strategic holdings.'
-pubDate: 'Dec 18 2024'
+pubDate: 'Dec 30 2024'
 heroImage: '/Network1.png'
 --- 
 
 While analyzing investment banks on SEC.gov, I observed an intriguing pattern: as other firms focus on equity trading, certain institutions like BlackRock quietly accumulate influence through thousands of strategic holdings. This project maps their cross-industry impact using public filings and network visualization.
 
-## Methodology
-
 ### Data Sources
 - 13F Holdings Reports
 - Public company ownership data(market cap, sector classification)
 - Policy influence scores from industry regulatory databases
-
-## Step Breakdown
 
 #### Catalogue
 - Data Collection
@@ -46,16 +42,7 @@ SELECT * FROM SubsidiaryTree;
 
 
 
-### Health Metrics Formula
-```html
-<!-- Formula Calculator -->
-<div class="formula-card">
-  <p>Health = 0.4×[1-(Cost/Rev)²] + 0.3×(1-DivΔ)×Goodwill% + 0.3×tanh(Debt/2Rev)</p>
-</div>
-```
-
 ---
-
 
 ## Analysis Framework
 ### SQL Hierarchy Processing
@@ -86,6 +73,7 @@ def generate_edges():
         yield f"{company.ticker},{company.sector},{company.influence_score}"
 
 
-### Sector Impact
-**Finding**: 72% of tech policy changes correlate with BlackRock ownership (p<0.01)
+#### Sector Impact
+Finding: 72% of tech policy changes correlate with BlackRock ownership (p<0.01).It is very interesting to study how passive index funds continue to achieve their soft impact through industry associations, policy lobbying, and influencing ESG pricing.
+In the future, I hope to study State Street and Vanguard, both passive index funds, and extract their lobbying documents to compare with the EU's leading development policy path.
 ```
