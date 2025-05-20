@@ -1,5 +1,5 @@
 ---  
-title: 'Machine learning classification for pricing medical services'
+title: 'Automatic Database Management'
 description: 'This study investigates the impact of medical service characteristics on pricing strategies through a structured machine learning framework. The research goal focuses on establishing a data-driven pricing recommendation system tailored to healthcare enterprises operational priorities.'
 pubDate: 'Mar 20 2025'
 heroImage: '/Workflow1.png'
