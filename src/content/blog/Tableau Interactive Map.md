@@ -5,6 +5,7 @@ pubDate: 'Mar 30 2025'
 heroImage: '/Earth4.png'
 ---  
 
+https://public.tableau.com/app/profile/qiushi.chen4012/viz/Book1_17514348462240/Dashboard?publish=yes
 
 This automated data entry model was developed during my research on locally-deployed large language models, designed for seamless deployment across enterprises and organizations.
 
