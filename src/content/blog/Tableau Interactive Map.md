@@ -72,7 +72,7 @@ All of our filters can be organized and organized in the final dashboard. Insert
 
 
 
-![blog placeholder](/Earthw4.png)
+![blog placeholder](/Earth4.png)
 
 Hope you like it.
 
