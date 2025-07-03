@@ -5,20 +5,25 @@ pubDate: 'Mar 30 2025'
 heroImage: '/Earth4.png'
 ---  
 
+Check the final result through:
 https://public.tableau.com/app/profile/qiushi.chen4012/viz/Book1_17514348462240/Dashboard?publish=yes
-
-This automated data entry model was developed during my research on locally-deployed large language models, designed for seamless deployment across enterprises and organizations.
-
-To implement this technology, I established Dify's foundational architecture using Docker and Ollama, integrating chatbot capabilities with locally-hosted knowledge base retrieval. The on-premise knowledge repositories incorporate corporate regulations, data entry protocols, and operational databases, enabling the localized LLM to generate employee-centric data interactions precisely aligned with organizational standards. This solution significantly enhances operational efficiency while improving accountability visualization through standardized data workflows.
 
 ![blog placeholder](/Earth1.png)
 
-The system workflow initiates with HTTP request authentication, automatically locking user access levels within the data hierarchy. An intelligent question classifier then directs users to appropriate task modules. Employees can engage in three core interactions: 
-1) **Compliance Training** via conversational scenarios with the chatbot
-2) **Data Retrieval** with automatic visualization tools that generate structured reports (fully customizable templates)
-3) **Automated Data Entry** - the system's flagship feature
+In this section, I will show you how to create an earthquake distribution archive with map coordinates, taking into account Gantt chart, bubble chart, and band chart.
+Firstly, I obtained the codes, intensities, and latitude and longitude coordinates of various earthquakes over the past fifty years. But this is still far from our analysis, as latitude and longitude need further conversion to be divided into countries and continents.
+
+
+
+I have used these two libraries : 
+1) **Reverse Geocoder** 
+2) **Pycountry** 
+
 
 ![blog placeholder](/Earth2.png)
+
+Through code below, we can get columns with detailed information of each earthquake:
+
 
 When executing data entry tasks, the system:
 - Logs user operations with audit trails
