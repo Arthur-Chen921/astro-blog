@@ -20,29 +20,63 @@ I have used these two libraries :
 2) **Pycountry** 
 
 
+
 ![blog placeholder](/Earth2.png)
 
 Through code below, we can get columns with detailed information of each earthquake:
 
+```markdown
+# convert country code to country name
+def code_to_name(cc):
+    try:
+        return pycountry.countries.get(alpha_2=cc).name
+    except:
+        return 'Unknown'
 
-When executing data entry tasks, the system:
-- Logs user operations with audit trails
-- Provides intelligent data cleansing with integrity verification to protect critical information
-- Processes standardized data through configured formulas
-- Cross-references preset thresholds (risk indexes/profit margins) and external data sources
-- Triggers real-time alerts to designated managers when hitting cost warnings or KPI targets
+# code to continent
+def code_to_continent(cc):
+    try:
+        country = pycountry.countries.get(alpha_2=cc)
+        continent_code = pc.country_alpha2_to_continent_code(country.alpha_2)
+        return pc.convert_continent_code_to_continent_name(continent_code)
+    except:
+        return 'Unknown'
 
-The locally-deployed architecture ensures complete control over corporate knowledge assets while maintaining: 
-- Automatic synchronization of latest regulations into workflows
-- Context-aware data validation against enterprise-specific criteria
-- Secure integration with existing on-premise databases
+# 
+coords = list(zip(df['Latitude'], df['Longitude']))
+
+# user reverse geocoding to get geographic info
+results = rg.search(coords)
+
+# extract information from reverse_geocoder 
+df['country_code'] = [get_safe(r, 'cc') for r in results]
+df['city'] = [get_safe(r, 'name') for r in results]  # nearest location name
+df['region'] = [get_safe(r, 'admin1') for r in results]  # sovernty
+
+# user pycountry to get standardized name
+df['country_name'] = df['country_code'].apply(code_to_name)
+df['continent'] = df['country_code'].apply(code_to_continent)
+ 
+```
+
+
+
+Next, we will design a map and connect the seismic source and intensity together through different marks.
+If you like, you can also build your own unique map through the components in CARTO.
 
 ![blog placeholder](/Earth3.png)
+
+We create parameters and calculation fields to visually filter out the top list and earthquakes in certain intensity ranges that we need, and pull these fields into the canvas's filtering or page position to interact with the data graph.
+
+All of our filters can be organized and organized in the final dashboard. Insert the literature and links we need in the appropriate place.
+
+
+
 ![blog placeholder](/Earthw4.png)
 
+Hope you like it.
 
-
-All components support modular replacement, allowing organizations to maintain system evolution aligned with operational needs without infrastructure overhaul.
+https://public.tableau.com/app/profile/qiushi.chen4012/viz/Book1_17514348462240/Dashboard?publish=yes
 
 
 
